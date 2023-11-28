@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/devops-frontend/static/css/main.f1cc0406.css",
+    "main.js": "/devops-frontend/static/js/main.2aec297c.js",
+    "index.html": "/devops-frontend/index.html",
+    "main.f1cc0406.css.map": "/devops-frontend/static/css/main.f1cc0406.css.map",
+    "main.2aec297c.js.map": "/devops-frontend/static/js/main.2aec297c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f1cc0406.css",
+    "static/js/main.2aec297c.js"
+  ]
+}
