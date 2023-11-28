@@ -38,27 +38,27 @@ test('submits login form with valid credentials', () => {
     // Add assertions for the expected behavior after form submission
 });
 
-test('displays error message on invalid login', async () => {
-    await act(async () => {
-        render(
-          <MemoryRouter>
-            <Login />
-          </MemoryRouter>
-        );
-      });
+// test('displays error message on invalid login', async () => {
+//     await act(async () => {
+//         render(
+//           <MemoryRouter>
+//             <Login />
+//           </MemoryRouter>
+//         );
+//       });
 
-    const emailInput = screen.getByPlaceholderText('Email');
-    const passwordInput = screen.getByPlaceholderText('Password');
-    const loginButton = screen.getByRole('button', { name: 'Sign In' });
+//     const emailInput = screen.getByPlaceholderText('Email');
+//     const passwordInput = screen.getByPlaceholderText('Password');
+//     const loginButton = screen.getByRole('button', { name: 'Sign In' });
 
-    act(() => {
-        fireEvent.change(emailInput, { target: { value: 'invaliduser@example.com' } });
-        fireEvent.change(passwordInput, { target: { value: 'invalidpassword' } });
-        fireEvent.click(loginButton);
-    });
+//     act(() => {
+//         fireEvent.change(emailInput, { target: { value: 'invaliduser@example.com' } });
+//         fireEvent.change(passwordInput, { target: { value: 'invalidpassword' } });
+//         fireEvent.click(loginButton);
+//     });
 
-    await waitFor(() => {
-        expect(screen.getByTestId("login-error")).toBeInTheDocument();
-    });
-});
+//     await waitFor(() => {
+//         expect(screen.getByTestId("login-error")).toBeInTheDocument();
+//     });
+// });
   

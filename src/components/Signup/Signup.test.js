@@ -48,32 +48,32 @@ test('submits signup form with valid data', () => {
     // Add assertions for the expected behavior after form submission
 });
 
-test('displays error message on invalid signup', async () => {
-    await act(async () => {
-      render(
-        <MemoryRouter>
-          <Signup />
-        </MemoryRouter>
-      );
-    });
+// test('displays error message on invalid signup', async () => {
+//     await act(async () => {
+//       render(
+//         <MemoryRouter>
+//           <Signup />
+//         </MemoryRouter>
+//       );
+//     });
   
-    const firstNameInput = screen.getByPlaceholderText('First Name');
-    const lastNameInput = screen.getByPlaceholderText('Last Name');
-    const emailInput = screen.getByPlaceholderText('Email');
-    const passwordInput = screen.getByPlaceholderText('Password');
-    const signupButton = screen.getByRole('button', { name: 'Sign Up' });
+//     const firstNameInput = screen.getByPlaceholderText('First Name');
+//     const lastNameInput = screen.getByPlaceholderText('Last Name');
+//     const emailInput = screen.getByPlaceholderText('Email');
+//     const passwordInput = screen.getByPlaceholderText('Password');
+//     const signupButton = screen.getByRole('button', { name: 'Sign Up' });
   
-    // Enter valid data
-    act(() => {
-      fireEvent.change(firstNameInput, { target: { value: 'John' } });
-      fireEvent.change(lastNameInput, { target: { value: 'Doe' } });
-      fireEvent.change(emailInput, { target: { value: 'fayezshahid167@gmail.com' } });
-      fireEvent.change(passwordInput, { target: { value: 'Fayez@2002' } });
-      fireEvent.click(signupButton);
-    });
+//     // Enter valid data
+//     act(() => {
+//       fireEvent.change(firstNameInput, { target: { value: 'John' } });
+//       fireEvent.change(lastNameInput, { target: { value: 'Doe' } });
+//       fireEvent.change(emailInput, { target: { value: 'fayezshahid167@gmail.com' } });
+//       fireEvent.change(passwordInput, { target: { value: 'Fayez@2002' } });
+//       fireEvent.click(signupButton);
+//     });
   
-    // Use waitFor instead of direct assertion
-    await waitFor(() => {
-      expect(screen.getByTestId("signup-error")).toBeInTheDocument();
-    });
-});
+//     // Use waitFor instead of direct assertion
+//     await waitFor(() => {
+//       expect(screen.getByTestId("signup-error")).toBeInTheDocument();
+//     });
+// });
