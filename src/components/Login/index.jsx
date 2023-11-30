@@ -14,7 +14,8 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "http://localhost:8080/api/login";
+			// const url = "http://localhost:8080/api/login";
+			const url = "https://rgates10412839-prod.azurewebsites.net/api/login";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			window.location = "/";
