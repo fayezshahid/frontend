@@ -20,6 +20,7 @@ const Signup = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
+			// const url = "http://localhost:8080/api/register";
 			const url = "https://rgates10412839-prod.azurewebsites.net:443/api/register";
 			const { data: res } = await axios.post(url, data);
 			navigate("/login");
