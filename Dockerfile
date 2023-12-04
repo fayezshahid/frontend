@@ -8,6 +8,10 @@ RUN npm install
 
 COPY . .
 
+RUN npm run test:ci
+
+COPY junit.xml ../
+
 RUN npm run build
 
 EXPOSE 80
