@@ -8,7 +8,7 @@ RUN npm install
 
 COPY . .
 
-ARG CACHEBUST=1
+ARG CACHEBUST
 RUN npm run test:ci
 
 COPY junit.xml ../
