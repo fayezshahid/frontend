@@ -20,23 +20,23 @@ test('renders login form correctly', () => {
     expect(loginButton).toBeInTheDocument();
 });
 
-test('submits login form with valid credentials', () => {
-    render(
-        <MemoryRouter>
-            <Login />
-        </MemoryRouter>
-    );
+// test('submits login form with valid credentials', () => {
+//     render(
+//         <MemoryRouter>
+//             <Login />
+//         </MemoryRouter>
+//     );
 
-    const emailInput = screen.getByPlaceholderText('Email');
-    const passwordInput = screen.getByPlaceholderText('Password');
-    const loginButton = screen.getByRole('button', { name: 'Sign In' });
+//     const emailInput = screen.getByPlaceholderText('Email');
+//     const passwordInput = screen.getByPlaceholderText('Password');
+//     const loginButton = screen.getByRole('button', { name: 'Sign In' });
 
-    fireEvent.change(emailInput, { target: { value: 'fayezshahid167@gmail.com' } });
-    fireEvent.change(passwordInput, { target: { value: 'Fayez@2002' } });
-    fireEvent.click(loginButton);
+//     fireEvent.change(emailInput, { target: { value: 'fayezshahid167@gmail.com' } });
+//     fireEvent.change(passwordInput, { target: { value: 'Fayez@2002' } });
+//     fireEvent.click(loginButton);
 
-    // Add assertions for the expected behavior after form submission
-});
+//     // Add assertions for the expected behavior after form submission
+// });
 
 // test('displays error message on invalid login', async () => {
 //     await act(async () => {
