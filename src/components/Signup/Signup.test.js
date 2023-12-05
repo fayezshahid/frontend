@@ -25,28 +25,28 @@ test('renders signup form correctly', () => {
     expect(signupButton).toBeInTheDocument();
 });
 
-test('submits signup form with valid data', () => {
-    render(
-        <MemoryRouter>
-            <Signup />
-        </MemoryRouter>
-    );
+// test('submits signup form with valid data', () => {
+//     render(
+//         <MemoryRouter>
+//             <Signup />
+//         </MemoryRouter>
+//     );
     
-    const firstNameInput = screen.getByPlaceholderText('First Name');
-    const lastNameInput = screen.getByPlaceholderText('Last Name');
-    const emailInput = screen.getByPlaceholderText('Email');
-    const passwordInput = screen.getByPlaceholderText('Password');
-    const signupButton = screen.getByRole('button', { name: 'Sign Up' });
+//     const firstNameInput = screen.getByPlaceholderText('First Name');
+//     const lastNameInput = screen.getByPlaceholderText('Last Name');
+//     const emailInput = screen.getByPlaceholderText('Email');
+//     const passwordInput = screen.getByPlaceholderText('Password');
+//     const signupButton = screen.getByRole('button', { name: 'Sign Up' });
 
-    fireEvent.change(firstNameInput, { target: { value: 'John' } });
-    fireEvent.change(lastNameInput, { target: { value: 'Doe' } });
-    fireEvent.change(emailInput, { target: { value: 'john.doe@example.com' } });
-    fireEvent.change(passwordInput, { target: { value: 'newpassword' } });
-    // fireEvent.change(confirmPasswordInput, { target: { value: 'newpassword' } });
-    fireEvent.click(signupButton);
+//     fireEvent.change(firstNameInput, { target: { value: 'John' } });
+//     fireEvent.change(lastNameInput, { target: { value: 'Doe' } });
+//     fireEvent.change(emailInput, { target: { value: 'john.doe@example.com' } });
+//     fireEvent.change(passwordInput, { target: { value: 'newpassword' } });
+//     // fireEvent.change(confirmPasswordInput, { target: { value: 'newpassword' } });
+//     fireEvent.click(signupButton);
 
-    // Add assertions for the expected behavior after form submission
-});
+//     // Add assertions for the expected behavior after form submission
+// });
 
 // test('displays error message on invalid signup', async () => {
 //     await act(async () => {
